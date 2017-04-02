@@ -4,7 +4,12 @@ import koudaidy
 import fresh_tomatoes
 
 def get_movies():
-    # get movie data list from http://www.kuyiyuan.cn
+    """ Create movie Model with data from  http://www.kuyiyuan.cn
+
+    Returns:
+        The list of movie model
+
+    """
     movies_data = koudaidy.get_data()
     movies = []
 
@@ -16,6 +21,9 @@ def get_movies():
     return movies
 
 def show_movies_page():
+    """ show movie page
+
+    """
     movies = get_movies()
     fresh_tomatoes.open_movies_page(movies)
 
