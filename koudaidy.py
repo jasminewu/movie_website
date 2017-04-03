@@ -3,7 +3,16 @@ import urllib2
 import urllib
 import re
 
-class Spider:
+class Spider(object):
+    """ this Spider class is created to get a web html source
+    Args:
+        param1(str): baseURL, web base url
+
+    Menthods:
+        get_page: input a page url and return a whole page html
+        get_content: input whole page html and return a filter page html
+
+    """
     def __init__(self):
         self.baseURL = 'http://www.kuyiyuan.cn'
 
@@ -37,6 +46,7 @@ class Spider:
             contents.append(new_item)
         return contents
 
+# get movie data by using Spider class
 def get_data():
     spider = Spider()
     page = spider.get_page('')

@@ -1,6 +1,7 @@
-class Movie():
-    """ Create movie model to store the movie data
-
+class Movie(object):
+    """ this Movie class is created to store movie data,
+        input movie_title, poster_image, play_url and
+        output a movie instance
     Args:
         param1(str): movie_title,the first param
         param2(str): poster_image,the second param
